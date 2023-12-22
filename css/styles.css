@@ -11420,6 +11420,22 @@ section.resume-section .resume-section-content {
   width: 100%;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 600px; /* Defina o tamanho desejado para o card */
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
