@@ -3736,7 +3736,7 @@ fieldset:disabled .btn {
   text-decoration: underline;
 }
 .btn-link:hover {
-  color: #974a2d;
+  color: #bb7960;
 }
 .btn-link:disabled,
 .btn-link.disabled {
@@ -3773,6 +3773,10 @@ fieldset:disabled .btn {
   display: none;
 }
 
+h7{
+  text-align: left;
+  margin-left: 35px;
+}
 .collapsing {
   height: 0;
   overflow: hidden;
