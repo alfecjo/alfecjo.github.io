@@ -290,20 +290,17 @@
               <span class="text-primary"><b>Jan 2024 - Dez 2024</b></span>
             </div>
           </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
               <h3 class="mb-0">Universidade Tecnológica Federal do Paraná</h3>
               <div class="subheading mb-3">
-                Tecnologia Java - Pós-Graduação lato sensu (Média Geral 9.6 -
-                notas acima de 9.0)
-                <a
-                  href="http://pos-graduacao-ead.cp.utfpr.edu.br/java/?gclid=CjwKCAiAhJWsBhAaEiwAmrNyqzO-CAIaTt49Pfhobb1w-CcmfB9lqYPJXgfodmmRaUtCEPW3o8UCLBoCMOgQAvD_BwE"
-                  target="_blank"
+                Tecnologia Java - Pós-Graduação lato sensu
+                <button
+                  onclick="mostrarCertificado()"
                   class="btn btn-success btn-sm ms-2"
-                  ><i class="fa fa-cog fa-spin"></i>Saiba mais</a
                 >
+                  <i class="fa fa-cog fa-spin"></i> Ver Certificado
+                </button>
               </div>
               <img src="assets/img/logoUTFPR.jpg" alt="" />
             </div>
@@ -311,6 +308,14 @@
               <span class="text-primary"><b>Fev 2022 - Nov 2023</b></span>
             </div>
           </div>
+                    
+          <script>
+            function mostrarCertificado() {              
+              const certificadoPath = './assets/img/certificadoUTFPR.jpg';                          
+              window.open(certificadoPath, '_blank');
+            }
+          </script>
+          
           <div class="d-flex flex-column flex-md-row justify-content-between">
             <div class="flex-grow-1">
               <h3 class="mb-0">SENAI São Paulo</h3>
