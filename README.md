@@ -10,7 +10,7 @@ vou acabar fazenndo parte da sua página de bicão, rsrsrs...
 ![CSS](https://img.shields.io/badge/css-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![HTML](https://img.shields.io/badge/html-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
-## Table of Contents
+## Tabela de Conteúdos
 
 - [Instalação](#Instalação)
 - [Uso](#Uso)
