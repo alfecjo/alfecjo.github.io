@@ -21,7 +21,7 @@ vou acabar fazenndo parte da sua página de bicão, rsrsrs...
 1. Clone o repositório ou baixe o arquivo .zip:
 
 ```bash
-git clone (https://github.com/alfecjo/Alfecjo.git)
+git clone https://github.com/alfecjo/Alfecjo.github.io.git
 ```
 ## Uso
 
