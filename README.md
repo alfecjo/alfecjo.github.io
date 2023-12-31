@@ -25,7 +25,7 @@ git clone https://github.com/alfecjo/Alfecjo.github.io.git
 ```
 ## Uso
 
-1. Execute em sua IDE de preferência. Contudo, o desenvolvimento foi feito no VSCode! Você pode começar com, abrir o diretório raiz, que é onde se encontra-se os
+1. Execute em sua IDE preferida. Contudo, o desenvolvimento foi feito no VSCode! Você pode começar com, abrir o diretório raiz, que é onde encontra-se os
    arquivos que sofrerão as mudanças. Desta forma, navegue pelo código e altere tudo que for necessário. Uma dica: carregue sua página no seu provedor de nuvem
    preferido ou no próprio github-pages...
 
