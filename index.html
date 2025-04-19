@@ -4245,8 +4245,14 @@
                   <option value="Sistemas Móveis de Quinta Geração.pdf">
                     5G
                   </option>
-                  <option value="Microsoft Excel.pdf">Microsoft Excel</option>
+                  <option value="Microsoft Excel.pdf">Microsoft Excel</option>                  
                 </select>
+                <a
+                href="https://alfecjo.github.io/antonio_almeida_embarcatech_HBr_2025/"
+                target="_blank"
+                class="btn btn-success btn-sm ms-2"
+                ><i class="fa fa-cog fa-spin"></i>Projetos</a
+              >
               </div>
               <embed
                 id="certificadoViewer"
@@ -4255,18 +4261,6 @@
                 width="110%"
                 height="660px"
               />
-              <div class="mt-4">
-                <p>
-                  Confira também meus projetos práticos relacionados aos cursos
-                  do Embarcatech e INATEL:
-                  <a
-                    href="https://alfecjo.github.io/antonio_almeida_embarcatech_HBr_2025/"
-                    target="_blank"
-                  >
-                    Ver projetos Embarcatech
-                  </a>
-                </p>
-              </div>
             </div>
           </ul>
         </div>
@@ -4399,39 +4393,40 @@
       const select = document.getElementById("certificadoSelect");
       const viewer = document.getElementById("certificadoViewer");
       const selectedValue = select.value;
-
+  
       if (selectedValue.startsWith("http")) {
         window.open(selectedValue, "_blank");
       } else {
         viewer.src = "assets/img/" + selectedValue;
       }
     }
-
+  
     // Ao carregar a página, seleciona o primeiro certificado local
     window.addEventListener("DOMContentLoaded", () => {
       const select = document.getElementById("certificadoSelect");
       const viewer = document.getElementById("certificadoViewer");
       const firstValue = select.options[0].value;
-
+  
       if (!firstValue.startsWith("http")) {
         viewer.src = "assets/img/" + firstValue;
       }
     });
-  </script>
-
+  </script>  
+  
   <script>
     function enviarMensagemViaWhatsApp() {
       alert("Mensagem enviada via servidor @alfecjo.payara.server..");
     }
   </script>
 
-  <script>
-    window.addEventListener("load", function () {
-      const viewer = document.getElementById("certificadoViewer");
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        viewer.style.visibility = "visible";
-      }, 200);
-    });
-  </script>
+<script>
+  window.addEventListener("load", function () {
+    const viewer = document.getElementById("certificadoViewer");
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      viewer.style.visibility = "visible";
+    }, 200);
+  });
+</script>
+
 </html>
