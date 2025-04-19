@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#sideNav',
             offset: 74,
         });
+        window.scrollTo({ top: 0, behavior: "instant" })
     };
 
     // Collapse responsive navbar when toggler is visible
