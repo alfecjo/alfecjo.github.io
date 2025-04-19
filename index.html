@@ -4205,45 +4205,59 @@
                 ><i class="fa fa-cog fa-spin"></i>Saiba mais</a
               >
             </li>
+
             <div class="mt-4">
               <h3 class="mb-0">Certificados</h3>
-
               <div class="subheading mb-3">
-                Curso de Sistemas Embarcados
-                <a
-                  href="assets/img/certificado_Embarcatech.pdf"
-                  target="_blank"
-                  class="btn btn-success btn-sm ms-2"
+                Selecione o certificado desejado:
+                <select
+                  id="certificadoSelect"
+                  class="form-select w-auto d-inline ms-2"
+                  onchange="trocarCertificado()"
                 >
-                  <i class="fa fa-cog fa-spin"></i>Saiba mais
-                </a>
+                  <option value="certificado_Embarcatech.pdf">
+                    Sistemas Embarcados
+                  </option>
+                  <option value="AutoCad.pdf">AutoCad</option>
+                  <option value="DWDM.pdf">DWDM</option>
+                  <option value="Equipamentos.pdf">Equipamentos</option>
+                  <option value="Gerência de Redes.pdf">
+                    Gerência de Redes
+                  </option>
+                  <option value="Introdução ao EHS.pdf">
+                    Introdução ao EHS
+                  </option>
+                  <option
+                    value="Introdução às Comunicações Móveis e Fundamentos.pdf"
+                  >
+                    Comunicações Móveis e Fundamentos
+                  </option>
+                  <option value="Python.pdf">Python</option>
+                  <option value="Redes IP.pdf">Redes IP</option>
+                  <option value="Sistemas Móveis de Quarta Geração.pdf">
+                    4G
+                  </option>
+                  <option value="Sistemas Móveis de Quinta Geração.pdf">
+                    5G
+                  </option>
+                  <option value="Sistemas Móveis de Segunda Geração.pdf">
+                    2G
+                  </option>
+                  <option value="Sistemas Móveis de Terceira Geração.pdf">
+                    3G
+                  </option>
+                  <option value="Microsoft Excel.pdf">Microsoft Excel</option>
+                </select>
               </div>
+
               <embed
+                id="certificadoViewer"
                 src="assets/img/certificado_Embarcatech.pdf"
                 type="application/pdf"
                 width="100%"
                 height="600px"
               />
-
-              <div class="subheading mb-3 mt-4">
-                Sistemas Móveis de Segunda Geração
-                <a
-                  href="assets/img/Sistemas Móveis de Segunda Geração.pdf"
-                  target="_blank"
-                  class="btn btn-success btn-sm ms-2"
-                >
-                  <i class="fa fa-cog fa-spin"></i>Saiba mais
-                </a>
-              </div>
-              <embed
-                src="assets/img/Sistemas Móveis de Segunda Geração.pdf"
-                type="application/pdf"
-                width="100%"
-                height="600px"
-              />
             </div>
-
-            
           </ul>
         </div>
       </section>
@@ -4373,6 +4387,14 @@
   <script>
     function enviarMensagemViaWhatsApp() {
       alert("Mensagem enviada via servidor @alfecjo.payara.server..");
+    }
+  </script>
+
+  <script>
+    function trocarCertificado() {
+      const select = document.getElementById("certificadoSelect");
+      const viewer = document.getElementById("certificadoViewer");
+      viewer.src = "assets/img/" + select.value;
     }
   </script>
 </html>
