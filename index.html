@@ -4206,7 +4206,7 @@
               >
             </li>
 
-            
+
 
             <div class="mt-4">
               <h3 class="mb-0">Certificados</h3>
@@ -4390,16 +4390,23 @@
   </footer>
 
   <script>
-    function enviarMensagemViaWhatsApp() {
-      alert("Mensagem enviada via servidor @alfecjo.payara.server..");
-    }
-  </script>
-
-  <script>
     function trocarCertificado() {
       const select = document.getElementById("certificadoSelect");
-      const viewer = document.getElementById("certificadoViewer");
-      viewer.src = "assets/img/" + select.value;
+      const valor = select.value;
+  
+      if (valor.startsWith("http")) {
+        // Abre o link externo em nova aba
+        window.open(valor, "_blank");
+      } else {
+        // Mostra o PDF local no embed
+        document.getElementById("certificadoViewer").src = "assets/img/" + valor;
+      }
+    }
+  </script>  
+
+  <script>
+    function enviarMensagemViaWhatsApp() {
+      alert("Mensagem enviada via servidor @alfecjo.payara.server..");
     }
   </script>
 </html>
