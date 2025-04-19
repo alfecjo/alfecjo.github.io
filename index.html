@@ -4206,8 +4206,6 @@
               >
             </li>
 
-
-
             <div class="mt-4">
               <h3 class="mb-0">Certificados Embarcatech e INATEL</h3>
               <div class="subheading mb-3">
@@ -4249,7 +4247,6 @@
                     5G
                   </option>
                   <option value="Microsoft Excel.pdf">Microsoft Excel</option>
-                  
                 </select>
               </div>
 
@@ -4391,20 +4388,27 @@
     function trocarCertificado() {
       const select = document.getElementById("certificadoSelect");
       const valor = select.value;
-  
+
       if (valor.startsWith("http")) {
         // Abre o link externo em nova aba
         window.open(valor, "_blank");
       } else {
         // Mostra o PDF local no embed
-        document.getElementById("certificadoViewer").src = "assets/img/" + valor;
+        document.getElementById("certificadoViewer").src =
+          "assets/img/" + valor;
       }
     }
-  </script>  
+  </script>
 
   <script>
     function enviarMensagemViaWhatsApp() {
       alert("Mensagem enviada via servidor @alfecjo.payara.server..");
     }
+  </script>
+
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(() => window.scrollTo(0, 0), 100); // scrolla para o topo após carregar
+    });
   </script>
 </html>
