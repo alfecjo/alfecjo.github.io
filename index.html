@@ -4205,7 +4205,6 @@
                 ><i class="fa fa-cog fa-spin"></i>Saiba mais</a
               >
             </li>
-
             <div class="mt-4">
               <h3 class="mb-0">Certificados Embarcatech e INATEL</h3>
               <div class="subheading mb-3">
@@ -4251,13 +4250,13 @@
                 </select>
               </div>
 
-              <embed
+              <!-- <embed
                 id="certificadoViewer"
                 src="assets/img/certificado_Embarcatech.pdf"
                 type="application/pdf"
                 width="110%"
                 height="660px"
-              />
+              /> -->
             </div>
           </ul>
         </div>
@@ -4388,18 +4387,24 @@
   <script>
     function trocarCertificado() {
       const select = document.getElementById("certificadoSelect");
-      const valor = select.value;
+      const viewer = document.getElementById("certificadoViewer");
+      const selectedValue = select.value;
   
-      if (valor.startsWith("http")) {
-        // Abre o link externo em nova aba
-        window.open(valor, "_blank");
+      // Se for um link externo (como um certificado do Alura)
+      if (selectedValue.startsWith("http")) {
+        window.open(selectedValue, "_blank");
       } else {
-        // Mostra o PDF local no embed
-        document.getElementById("certificadoViewer").src = "assets/img/" + valor;
+        // Certificados locais
+        viewer.src = "assets/img/" + selectedValue;
       }
     }
-  </script>  
-
+  
+    // Garantir que o <embed> não seja carregado antes da escolha
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("certificadoViewer").removeAttribute("src");
+    });
+  </script>
+  
   <script>
     function enviarMensagemViaWhatsApp() {
       alert("Mensagem enviada via servidor @alfecjo.payara.server..");
