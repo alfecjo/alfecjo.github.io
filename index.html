@@ -4250,13 +4250,13 @@
                 </select>
               </div>
 
-              <!-- <embed
+              <embed
                 id="certificadoViewer"
-                src="assets/img/certificado_Embarcatech.pdf"
+                src=""
                 type="application/pdf"
                 width="110%"
                 height="660px"
-              /> -->
+              />
             </div>
           </ul>
         </div>
@@ -4390,20 +4390,24 @@
       const viewer = document.getElementById("certificadoViewer");
       const selectedValue = select.value;
   
-      // Se for um link externo (como um certificado do Alura)
       if (selectedValue.startsWith("http")) {
         window.open(selectedValue, "_blank");
       } else {
-        // Certificados locais
         viewer.src = "assets/img/" + selectedValue;
       }
     }
   
-    // Garantir que o <embed> não seja carregado antes da escolha
+    // Ao carregar a página, seleciona o primeiro certificado local
     window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("certificadoViewer").removeAttribute("src");
+      const select = document.getElementById("certificadoSelect");
+      const viewer = document.getElementById("certificadoViewer");
+      const firstValue = select.options[0].value;
+  
+      if (!firstValue.startsWith("http")) {
+        viewer.src = "assets/img/" + firstValue;
+      }
     });
-  </script>
+  </script>  
   
   <script>
     function enviarMensagemViaWhatsApp() {
