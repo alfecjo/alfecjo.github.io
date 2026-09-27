@@ -898,14 +898,12 @@
       adiciono as camadas de rede e conectividade necessárias, e levo esses dados até a nuvem e o navegador, 
       onde o usuário final interage em tempo real. Eu cumpro a promessa do IoT de ponta a ponta, dividindo o ecossistema em três pilares fundamentais:
     </p>
-
     <ul class="list-unstyled mb-4">
       <li class="mb-2">
         <i class="fas fa-microchip text-primary mr-2"></i>
         <strong>Edge & Firmwares:</strong> Engenharia em <strong>C/C++ puro</strong> sobre o RTOS <strong>Zephyr</strong>. Desenvolvo com princípios de <strong>baixo acoplamento e alta coesão</strong>, permitindo que algoritmos de firmware operem de forma agnóstica ao silício. 
-        Isso viabiliza a prototipagem rápida e conectividade direta à internet utilizando o ecossistema do <strong>Pi Pico W</strong>, bem como a migração transparente para produção em cenários críticos de ultra-baixo consumo com o SoC <strong>nRF54L15</strong> — otimizando a eficiência energética de estados de <i>stand-by</i> (0.7 a 2.9 µA) até picos de transmissão de rádio (3.4 a 4.8 mA) com comunicações estruturadas (ZBus), serialização leve (NanoPB) e <strong>BLE (Bluetooth Low Energy)</strong>.
+        Isso valida a portabilidade da arquitetura desde ecossistemas de alta performance como o <strong>Nucleo-F767ZI (ARM Cortex-M7)</strong> até a prototipagem rápida com o <strong>Pi Pico W</strong>, bem como a migração transparente para produção em cenários críticos de ultra-baixo consumo com o SoC <strong>nRF54L15</strong> — otimizando a eficiência energética de estados de <i>stand-by</i> (0.7 a 2.9 µA) até picos de transmissão de rádio (3.4 a 4.8 mA) com comunicações estruturadas (ZBus), serialização leve (NanoPB) e <strong>BLE (Bluetooth Low Energy)</strong>.
       </li>
-
       <li class="mb-2">
         <i class="fas fa-cloud text-primary mr-2"></i>
         <strong>Backend & Cloud:</strong> Integração e processamento de dados massivos na nuvem através de microsserviços robustos estruturados em <strong>Java Spring Boot</strong> (Gateway, Eureka, Feign).
