@@ -885,45 +885,97 @@
       <hr class="m-0" />
       <!-- Interests-->
 <section class="resume-section" id="interests">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Interesses & Trajetória</h2>
-    
-    <p class="lead">
-      Minha trajetória é movida pela convergência entre a Mecatrônica e o desenvolvimento de software escalável. 
-      Foco no ecossistema de IoT e Sistemas Embarcados, unindo o rigor do hardware à flexibilidade das arquiteturas modernas.
-    </p>
-    
-    <p>
-      Minha especialidade é conectar o isolado ao global: pego uma aplicação legada rodando em um microcontrolador, 
-      adiciono as camadas de rede e conectividade necessárias, e levo esses dados até a nuvem e o navegador, 
-      onde o usuário final interage em tempo real. Eu cumpro a promessa do IoT de ponta a ponta, dividindo o ecossistema em três pilares fundamentais:
-    </p>
-    <ul class="list-unstyled mb-4">
-      <li class="mb-2">
-        <i class="fas fa-microchip text-primary mr-2"></i>
-        <strong>Edge & Firmwares:</strong> Engenharia em <strong>C/C++ puro</strong> sobre o RTOS <strong>Zephyr</strong>. Desenvolvo com princípios de <strong>baixo acoplamento e alta coesão</strong>, permitindo que algoritmos de firmware operem de forma agnóstica ao silício. 
-        Isso valida a portabilidade da arquitetura desde ecossistemas de alta performance como o <strong>Nucleo-F767ZI (ARM Cortex-M7)</strong> até a prototipagem rápida com o <strong>Pi Pico W</strong>, bem como a migração transparente para produção em cenários críticos de ultra-baixo consumo com o SoC <strong>nRF54L15</strong> — otimizando a eficiência energética de estados de <i>stand-by</i> (0.7 a 2.9 µA) até picos de transmissão de rádio (3.4 a 4.8 mA) com comunicações estruturadas (ZBus), serialização leve (NanoPB) e <strong>BLE (Bluetooth Low Energy)</strong>.
-      </li>
-      <li class="mb-2">
-        <i class="fas fa-network-wired text-primary mr-2"></i>
-        <strong>Redes & Protocolos:</strong> Domínio na pilha de rede nativa do Zephyr RTOS, implementando conectividade robusta através do subsistema <strong>IP stack (lwIP/Zephyr TCP)</strong>. Experiência prática na configuração de drivers e abstrações de hardware via <i>Device Tree</i> para interfaces <strong>Ethernet (PHY/RMII)</strong> na Nucleo-F767ZI e pilhas de comunicação sem fio <strong>Wi-Fi (802.11)</strong> no Pi Pico W, garantindo o gerenciamento eficiente de sockets, buffers e tráfego de dados de borda.
-      </li>
-      <li class="mb-2">
-        <i class="fas fa-cloud text-primary mr-2"></i>
-        <strong>Backend & Cloud:</strong> Integração e processamento de dados massivos na nuvem através de microsserviços robustos estruturados em <strong>Java Spring Boot</strong> (Gateway, Eureka, Feign).
-      </li>
-      <li class="mb-2">
-        <i class="fas fa-laptop-code text-primary mr-2"></i>
-        <strong>Interface & DevOps:</strong> Integração multiplataforma via <strong>Web Bluetooth API (Angular/ProtobufJS)</strong> para cenários BLE, e comunicação direta de rede baseada em <strong>WebSockets / HTTP</strong> nativos em C para os ecossistemas Wi-Fi (Pi Pico W) e Ethernet (Nucleo-F767ZI) conectados ao ecossistema <strong>Java Spring</strong>. Infraestrutura sustentada por ambientes conteinerizados em <strong>Docker</strong> com automação CI/CD via <strong>GitHub Actions</strong> e atualização contínua com <strong>WatchTower</strong>.
-      </li>
-    </ul>
+<div class="resume-section-content">
+  <h2 class="mb-5">Interesses &amp; Trajetória</h2>
 
-    <p>
-      Meu compromisso atual é elevar essa prática técnica ao nível de excelência em <strong>Cibersegurança</strong>. 
-      Na era da Indústria 4.0, a segurança não é um opcional, mas o pilar central. Busco atuar como um arquiteto 
-      capaz de projetar ecossistemas conectados que sejam, por definição, seguros, eficientes e transformadores.
-    </p>
-  </div>
+  <p class="lead">
+    Minha trajetória é marcada pela convergência entre a Mecatrônica, os Sistemas Embarcados
+    e o desenvolvimento de software. Ao longo dos anos, venho conectando o mundo físico
+    às arquiteturas de software modernas, unindo o rigor do hardware à flexibilidade do
+    software distribuído.
+  </p>
+
+  <p>
+    Minha especialidade está em conectar o que tradicionalmente permanece isolado:
+    dispositivos embarcados, redes, serviços de backend e interfaces de usuário.
+    Parto da aplicação na borda, estabeleço a conectividade necessária e conduzo os dados
+    até os serviços e aplicações onde eles podem ser processados e utilizados em tempo real.
+    Essa visão de ponta a ponta se organiza em quatro pilares:
+  </p>
+
+  <ul class="list-unstyled mb-4">
+
+```
+<li class="mb-3">
+  <i class="fas fa-microchip text-primary mr-2"></i>
+  <strong>Edge &amp; Sistemas Embarcados:</strong>
+  desenvolvimento em <strong>C/C++</strong> sobre o RTOS
+  <strong>Zephyr</strong>, aplicando princípios de baixo acoplamento e alta coesão
+  para construir firmwares independentes das particularidades do hardware.
+  Essa abordagem permite trabalhar desde plataformas de maior capacidade, como a
+  <strong>Nucleo-F767ZI (ARM Cortex-M7)</strong>, até soluções de baixo consumo
+  baseadas em <strong>nRF54L15</strong>, passando por plataformas de prototipagem
+  como o <strong>Pi Pico W</strong>. A experiência envolve periféricos, interfaces
+  de comunicação, gerenciamento de energia e integração com sensores e dispositivos
+  de borda.
+</li>
+
+<li class="mb-3">
+  <i class="fas fa-network-wired text-primary mr-2"></i>
+  <strong>Redes &amp; Protocolos:</strong>
+  integração entre dispositivos e serviços utilizando protocolos e interfaces
+  adequados a cada cenário. Experiência prática com a pilha de rede do
+  <strong>Zephyr RTOS</strong>, Ethernet, Wi-Fi, BLE, TCP/IP, sockets e
+  comunicação entre dispositivos. No desenvolvimento embarcado, utilizo também
+  <i>Device Tree</i> para configuração e abstração do hardware, permitindo
+  estruturar soluções portáveis entre diferentes plataformas.
+</li>
+
+<li class="mb-3">
+  <i class="fas fa-server text-primary mr-2"></i>
+  <strong>Backend &amp; Sistemas Distribuídos:</strong>
+  desenvolvimento de serviços em <strong>Java</strong> e
+  <strong>Spring Boot</strong>, com experiência em arquiteturas baseadas em
+  microsserviços, <strong>API Gateway, Eureka, Feign, Kafka e PostgreSQL</strong>.
+  O foco está na integração entre serviços, processamento de eventos,
+  comunicação entre sistemas e construção de aplicações capazes de conectar
+  dispositivos, dados e regras de negócio.
+</li>
+
+<li class="mb-3">
+  <i class="fas fa-laptop-code text-primary mr-2"></i>
+  <strong>Aplicações, Integração &amp; Infraestrutura:</strong>
+  desenvolvimento de interfaces com <strong>Angular</strong>, incluindo integração
+  com dispositivos BLE por meio da <strong>Web Bluetooth API</strong>, além de
+  comunicação com serviços backend por <strong>HTTP, WebSockets e APIs REST</strong>.
+  A infraestrutura utiliza ambientes conteinerizados com
+  <strong>Docker</strong>, automação de build e entrega por
+  <strong>GitHub Actions</strong>, além de PostgreSQL, Nginx e mecanismos de
+  conectividade e publicação necessários aos ambientes distribuídos.
+</li>
+```
+
+  </ul>
+
+  <p>
+    Essa experiência também se materializa no desenvolvimento de soluções completas,
+    nas quais hardware, software, comunicação e operação precisam funcionar como um
+    único ecossistema. O projeto <strong>MeioDia</strong> é um exemplo dessa abordagem:
+    uma aplicação que integra catálogo, pedidos, pagamentos, comunicação entre
+    microsserviços e atualização da operação em tempo real, utilizando uma arquitetura
+    distribuída construída sobre tecnologias modernas.
+  </p>
+
+  <p>
+    Meu interesse atual é aprofundar essa experiência em
+    <strong>Cibersegurança</strong>, especialmente na proteção de sistemas conectados
+    e distribuídos. Na era da Indústria 4.0, dispositivos, redes, APIs e serviços
+    precisam ser projetados considerando segurança desde sua concepção.
+    Busco, portanto, ampliar minha atuação técnica na construção de ecossistemas
+    conectados que sejam <strong>seguros, eficientes, integráveis e sustentáveis</strong>.
+  </p>
+</div>
+
 </section>
 
 
