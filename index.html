@@ -905,12 +905,16 @@
         Isso valida a portabilidade da arquitetura desde ecossistemas de alta performance como o <strong>Nucleo-F767ZI (ARM Cortex-M7)</strong> até a prototipagem rápida com o <strong>Pi Pico W</strong>, bem como a migração transparente para produção em cenários críticos de ultra-baixo consumo com o SoC <strong>nRF54L15</strong> — otimizando a eficiência energética de estados de <i>stand-by</i> (0.7 a 2.9 µA) até picos de transmissão de rádio (3.4 a 4.8 mA) com comunicações estruturadas (ZBus), serialização leve (NanoPB) e <strong>BLE (Bluetooth Low Energy)</strong>.
       </li>
       <li class="mb-2">
+        <i class="fas fa-network-wired text-primary mr-2"></i>
+        <strong>Redes & Protocolos:</strong> Domínio na pilha de rede nativa do Zephyr RTOS, implementando conectividade robusta através do subsistema <strong>IP stack (lwIP/Zephyr TCP)</strong>. Experiência prática na configuração de drivers e abstrações de hardware via <i>Device Tree</i> para interfaces <strong>Ethernet (PHY/RMII)</strong> na Nucleo-F767ZI e pilhas de comunicação sem fio <strong>Wi-Fi (802.11)</strong> no Pi Pico W, garantindo o gerenciamento eficiente de sockets, buffers e tráfego de dados de borda.
+      </li>
+      <li class="mb-2">
         <i class="fas fa-cloud text-primary mr-2"></i>
         <strong>Backend & Cloud:</strong> Integração e processamento de dados massivos na nuvem através de microsserviços robustos estruturados em <strong>Java Spring Boot</strong> (Gateway, Eureka, Feign).
       </li>
       <li class="mb-2">
         <i class="fas fa-laptop-code text-primary mr-2"></i>
-        <strong>Interface & DevOps:</strong> Integração multiplataforma via <strong>Web Bluetooth API (Angular/ProtobufJS)</strong> para cenários BLE, e comunicação direta de rede baseada em <strong>WebSockets / HTTP</strong> nativos em C para o ecossistema Wi-Fi do Pi Pico W conectado ao ecossistema <strong>Java Spring</strong>. Infraestrutura sustentada por ambientes conteinerizados em <strong>Docker</strong> com automação CI/CD via <strong>GitHub Actions</strong> e atualização contínua com <strong>WatchTower</strong>.
+        <strong>Interface & DevOps:</strong> Integração multiplataforma via <strong>Web Bluetooth API (Angular/ProtobufJS)</strong> para cenários BLE, e comunicação direta de rede baseada em <strong>WebSockets / HTTP</strong> nativos em C para os ecossistemas Wi-Fi (Pi Pico W) e Ethernet (Nucleo-F767ZI) conectados ao ecossistema <strong>Java Spring</strong>. Infraestrutura sustentada por ambientes conteinerizados em <strong>Docker</strong> com automação CI/CD via <strong>GitHub Actions</strong> e atualização contínua com <strong>WatchTower</strong>.
       </li>
     </ul>
 
